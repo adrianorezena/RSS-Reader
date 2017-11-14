@@ -10,28 +10,117 @@
 
 @interface PrincipalViewController ()
 
+@property (nonatomic, strong) MenuViewController *menuController;
+@property (nonatomic, strong) UIViewController *optionController;
+@property (nonatomic, strong) UIView *menuView;
+@property (nonatomic, assign) CGFloat menuWidth;
+
 @end
 
 @implementation PrincipalViewController
 
+- (void)initDefaults {
+    self.view.backgroundColor = [UIColor whiteColor];
+}
+
+-(void)initUIElements {
+    CGFloat spaceFromRightMargin = 60;
+    self.menuWidth = self.view.frame.size.width - spaceFromRightMargin;
+    
+    self.menuView = [[UIView alloc] initWithFrame:CGRectMake(-self.menuWidth, 64, self.menuWidth, self.view.frame.size.height)];
+    self.menuView.hidden = YES;
+    self.menuView.backgroundColor = [UIColor cyanColor];
+    [self.view addSubview:self.menuView];
+    
+    self.menuController = [MenuViewController new];
+    self.menuController.delegate = self;
+    
+    self.imagemFundo = [UIImageView new];
+    self.imagemFundo.image = [UIImage imageNamed:@"rss.jpeg"];
+    self.imagemFundo.contentMode = UIViewContentModeCenter;
+    [self.view addSubview:self.imagemFundo];
+}
+
+-(void)viewDidLayoutSubviews {
+    self.imagemFundo.frame = self.view.bounds;
+    self.imagemFundo.center = self.view.center;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self initUIElements];
+    [self initDefaults];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear: animated];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Menu" style:UIBarButtonItemStylePlain target:self action:@selector(menuTapped)];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    
+    [self addChildViewController:self.menuController];
+    //self.menuController.view.frame = self.menuView.frame;
+    self.menuController.view.frame = CGRectMake(0, 0, self.menuView.frame.size.width, self.menuView.frame.size.height);
+    [self.menuView addSubview:self.menuController.view];
+    [self.menuController viewWillAppear:YES];
+    
+    NSLog(@"viewWillLayoutSubviews - self.menuView.frame: %@", NSStringFromCGRect(self.menuView.frame));
+    NSLog(@"viewWillLayoutSubviews - self.menuController.frame: %@", NSStringFromCGRect(self.menuController.view.frame));
 }
-*/
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    if ([self isMenuOpen]) {
+        [self closeMenu];
+    }
+}
+
+#pragma mark - MenuViewController Methods
+
+- (void)menuTapped {
+    if ([self isMenuOpen]) {
+        [self closeMenu];
+    } else {
+        [self openMenu];
+    }
+}
+
+- (BOOL)isMenuOpen {
+    return self.menuView.frame.origin.x == 0.f;
+}
+
+- (void)openMenu {
+    self.optionController = nil;
+    self.menuView.hidden = NO;
+    
+    [self.view bringSubviewToFront:self.menuView];
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        self.menuView.frame = CGRectMake(0, self.menuView.frame.origin.y, self.menuWidth, self.view.frame.size.height);
+    }];
+}
+
+- (void)closeMenu {
+    [UIView animateWithDuration:0.3 animations:^{
+        self.menuView.frame = CGRectMake(-self.menuWidth, self.menuView.frame.origin.y, self.menuWidth, self.view.frame.size.height);
+    } completion:^(BOOL finished) {
+        self.menuView.hidden = YES;
+    }];
+}
+
+#pragma mark - MenuViewControllerDelegate Methods
+
+-(void)menuController:(MenuViewController *)menuController didSelectItem:(UIViewController *)selectedItem withMenuItem:(MenuItem *)menuItem {
+    self.optionController = selectedItem;
+    
+    [self closeMenu];
+    
+    if (self.optionController) {
+        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Voltar" style:UIBarButtonItemStylePlain target:nil action:nil];
+        [self.navigationController pushViewController:self.optionController animated:YES];
+    }
+}
 
 @end

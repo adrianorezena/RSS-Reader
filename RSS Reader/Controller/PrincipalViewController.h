@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MenuViewController.h"
 
-@interface PrincipalViewController : UIViewController
+@interface PrincipalViewController : UIViewController <MenuViewControllerDelegate>
+
+@property (strong, nonatomic) UIImageView *imagemFundo;
 
 @end

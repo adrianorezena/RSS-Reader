@@ -14,6 +14,10 @@
 		B997F0BD1FBB2CB800946E71 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B997F0BC1FBB2CB800946E71 /* main.m */; };
 		B997F0C51FBB485E00946E71 /* PrincipalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B997F0C41FBB485E00946E71 /* PrincipalViewController.m */; };
 		B997F0C91FBB48C000946E71 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B997F0C81FBB48C000946E71 /* MenuViewController.m */; };
+		B997F0CD1FBB4BCB00946E71 /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B997F0CC1FBB4BCB00946E71 /* MenuTableViewCell.m */; };
+		B997F0D01FBB558700946E71 /* RSSMasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B997F0CF1FBB558700946E71 /* RSSMasterTableViewController.m */; };
+		B997F0D31FBB576B00946E71 /* MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B997F0D21FBB576B00946E71 /* MenuItem.m */; };
+		B997F0D51FBB619C00946E71 /* rss.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B997F0D41FBB619C00946E71 /* rss.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,13 @@
 		B997F0C41FBB485E00946E71 /* PrincipalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrincipalViewController.m; sourceTree = "<group>"; };
 		B997F0C71FBB48C000946E71 /* MenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		B997F0C81FBB48C000946E71 /* MenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		B997F0CB1FBB4BCB00946E71 /* MenuTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuTableViewCell.h; sourceTree = "<group>"; };
+		B997F0CC1FBB4BCB00946E71 /* MenuTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewCell.m; sourceTree = "<group>"; };
+		B997F0CE1FBB558700946E71 /* RSSMasterTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSSMasterTableViewController.h; sourceTree = "<group>"; };
+		B997F0CF1FBB558700946E71 /* RSSMasterTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSSMasterTableViewController.m; sourceTree = "<group>"; };
+		B997F0D11FBB576B00946E71 /* MenuItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuItem.h; sourceTree = "<group>"; };
+		B997F0D21FBB576B00946E71 /* MenuItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuItem.m; sourceTree = "<group>"; };
+		B997F0D41FBB619C00946E71 /* rss.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rss.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +72,8 @@
 		B997F0AC1FBB2CB800946E71 /* RSS Reader */ = {
 			isa = PBXGroup;
 			children = (
+				B997F0D61FBB61A400946E71 /* Images */,
+				B997F0CA1FBB4BB600946E71 /* View */,
 				B997F0C61FBB486200946E71 /* Controller */,
 				B997F0AD1FBB2CB800946E71 /* AppDelegate.h */,
 				B997F0AE1FBB2CB800946E71 /* AppDelegate.m */,
@@ -80,8 +93,29 @@
 				B997F0C41FBB485E00946E71 /* PrincipalViewController.m */,
 				B997F0C71FBB48C000946E71 /* MenuViewController.h */,
 				B997F0C81FBB48C000946E71 /* MenuViewController.m */,
+				B997F0CE1FBB558700946E71 /* RSSMasterTableViewController.h */,
+				B997F0CF1FBB558700946E71 /* RSSMasterTableViewController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		B997F0CA1FBB4BB600946E71 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B997F0CB1FBB4BCB00946E71 /* MenuTableViewCell.h */,
+				B997F0CC1FBB4BCB00946E71 /* MenuTableViewCell.m */,
+				B997F0D11FBB576B00946E71 /* MenuItem.h */,
+				B997F0D21FBB576B00946E71 /* MenuItem.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B997F0D61FBB61A400946E71 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B997F0D41FBB619C00946E71 /* rss.jpeg */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +176,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B997F0D51FBB619C00946E71 /* rss.jpeg in Resources */,
 				B997F0BA1FBB2CB800946E71 /* LaunchScreen.storyboard in Resources */,
 				B997F0B71FBB2CB800946E71 /* Assets.xcassets in Resources */,
 				B997F0B51FBB2CB800946E71 /* Main.storyboard in Resources */,
@@ -157,6 +192,9 @@
 			files = (
 				B997F0BD1FBB2CB800946E71 /* main.m in Sources */,
 				B997F0C51FBB485E00946E71 /* PrincipalViewController.m in Sources */,
+				B997F0D01FBB558700946E71 /* RSSMasterTableViewController.m in Sources */,
+				B997F0D31FBB576B00946E71 /* MenuItem.m in Sources */,
+				B997F0CD1FBB4BCB00946E71 /* MenuTableViewCell.m in Sources */,
 				B997F0AF1FBB2CB800946E71 /* AppDelegate.m in Sources */,
 				B997F0C91FBB48C000946E71 /* MenuViewController.m in Sources */,
 			);

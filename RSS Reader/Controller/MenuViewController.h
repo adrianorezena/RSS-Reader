@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MenuTableViewCell.h"
+#import "MenuItem.h"
+#import "RSSMasterTableViewController.h"
 
 @protocol MenuViewControllerDelegate;
 
@@ -18,6 +21,7 @@
 
 @protocol MenuViewControllerDelegate <NSObject>
 
--(void)menuController:(MenuViewController *)menuController didSelectItem:(UIViewController *)selectedItem /*withMenu:(MenuItem *) menuItem*/;
+-(void)menuController:(MenuViewController *)menuController didSelectItem:(UIViewController *)selectedItem withMenuItem:(MenuItem *)menuItem;
 
 @end
+
