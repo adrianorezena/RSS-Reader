@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MenuItem.h"
 
 @interface MenuTableViewCell : UITableViewCell
 
 @property (nonatomic, strong) UILabel *tituloLabel;
+
+-(void)configureWithMenuItem:(MenuItem *)dados;
 
 @end

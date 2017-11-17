@@ -8,6 +8,8 @@
 
 #import "PrincipalViewController.h"
 
+#import "RSSAPI.h"
+
 @interface PrincipalViewController ()
 
 @property (nonatomic, strong) MenuViewController *menuController;
@@ -24,10 +26,11 @@
 }
 
 -(void)initUIElements {
-    CGFloat spaceFromRightMargin = 60;
-    self.menuWidth = self.view.frame.size.width - spaceFromRightMargin;
+    CGFloat rightMargin = kIntegerMenuRightMargin;
+    CGFloat navigationControlHeight = kIntegerHeightNavigationControl;
     
-    self.menuView = [[UIView alloc] initWithFrame:CGRectMake(-self.menuWidth, 64, self.menuWidth, self.view.frame.size.height)];
+    self.menuWidth = self.view.frame.size.width - rightMargin;
+    self.menuView = [[UIView alloc] initWithFrame:CGRectMake(-self.menuWidth, navigationControlHeight, self.menuWidth, self.view.frame.size.height - navigationControlHeight)];
     self.menuView.hidden = YES;
     self.menuView.backgroundColor = [UIColor cyanColor];
     [self.view addSubview:self.menuView];
@@ -36,8 +39,10 @@
     self.menuController.delegate = self;
     
     self.imagemFundo = [UIImageView new];
-    self.imagemFundo.image = [UIImage imageNamed:@"rss.jpeg"];
+    NSString *imageNamed = kFileRSSImage;
+    self.imagemFundo.image = [UIImage imageNamed:imageNamed];
     self.imagemFundo.contentMode = UIViewContentModeCenter;
+    self.imagemFundo.alpha = 0.1;
     [self.view addSubview:self.imagemFundo];
 }
 
@@ -51,10 +56,6 @@
     
     [self initUIElements];
     [self initDefaults];
-}
-
--(void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear: animated];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Menu" style:UIBarButtonItemStylePlain target:self action:@selector(menuTapped)];
 }
 
@@ -62,13 +63,9 @@
     [super viewWillLayoutSubviews];
     
     [self addChildViewController:self.menuController];
-    //self.menuController.view.frame = self.menuView.frame;
     self.menuController.view.frame = CGRectMake(0, 0, self.menuView.frame.size.width, self.menuView.frame.size.height);
     [self.menuView addSubview:self.menuController.view];
     [self.menuController viewWillAppear:YES];
-    
-    NSLog(@"viewWillLayoutSubviews - self.menuView.frame: %@", NSStringFromCGRect(self.menuView.frame));
-    NSLog(@"viewWillLayoutSubviews - self.menuController.frame: %@", NSStringFromCGRect(self.menuController.view.frame));
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -118,6 +115,11 @@
     [self closeMenu];
     
     if (self.optionController) {
+        if ([self.optionController class] == [RSSMasterTableViewController class]) {
+            RSSMasterTableViewController *rssMasterTableViewController = (RSSMasterTableViewController *)self.optionController;
+            rssMasterTableViewController.rss = [[RSSAPI sharedInstance] getRSSWithId:menuItem.url];
+        }
+        
         self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Voltar" style:UIBarButtonItemStylePlain target:nil action:nil];
         [self.navigationController pushViewController:self.optionController animated:YES];
     }

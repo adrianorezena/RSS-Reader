@@ -22,29 +22,25 @@
 }
 
 -(void)initDefaults {
-    self.backgroundColor = [UIColor greenColor];
-    self.selectionStyle = UITableViewCellSelectionStyleNone;
+    self.backgroundColor = [UIColor grayColor];
 }
 
 -(void)initUIElements {
-    self.selectionStyle = UITableViewCellSelectionStyleNone;
-    
     self.tituloLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-    self.tituloLabel.textColor = [UIColor blackColor];
+    self.tituloLabel.font = [UIFont boldSystemFontOfSize:12];
+    self.tituloLabel.textAlignment = NSTextAlignmentLeft;
+    self.tituloLabel.textColor = [UIColor whiteColor];
     self.tituloLabel.backgroundColor = [UIColor clearColor];
     self.tituloLabel.numberOfLines = 0;
     [self addSubview:self.tituloLabel];
 }
 
-
 -(void)layoutSubviews {
-    self.tituloLabel.frame = CGRectMake(20, 5, self.frame.size.width, 20);
+    self.tituloLabel.frame = CGRectMake(10, (self.frame.size.height / 2) - 20, self.frame.size.width, 40);
 }
 
-/*
 -(void)configureWithMenuItem:(MenuItem *)dados {
-    self.iconeLabel.text = dados.icone;
-    self.tituloLabel.text = dados.title;
-}*/
+    self.tituloLabel.text = dados.titulo;
+}
 
 @end

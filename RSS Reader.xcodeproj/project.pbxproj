@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9FB1A5E881EC97D0F76B3BC7 /* libPods-RSS Reader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 740C6A6DF483CFBC68EB8A23 /* libPods-RSS Reader.a */; };
+		B9071CDC1FBEFD6F00356A8F /* rss.png in Resources */ = {isa = PBXBuildFile; fileRef = B9071CDB1FBEFD6F00356A8F /* rss.png */; };
 		B997F0AF1FBB2CB800946E71 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B997F0AE1FBB2CB800946E71 /* AppDelegate.m */; };
 		B997F0B51FBB2CB800946E71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B997F0B31FBB2CB800946E71 /* Main.storyboard */; };
 		B997F0B71FBB2CB800946E71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B997F0B61FBB2CB800946E71 /* Assets.xcassets */; };
@@ -17,10 +19,26 @@
 		B997F0CD1FBB4BCB00946E71 /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B997F0CC1FBB4BCB00946E71 /* MenuTableViewCell.m */; };
 		B997F0D01FBB558700946E71 /* RSSMasterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B997F0CF1FBB558700946E71 /* RSSMasterTableViewController.m */; };
 		B997F0D31FBB576B00946E71 /* MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B997F0D21FBB576B00946E71 /* MenuItem.m */; };
-		B997F0D51FBB619C00946E71 /* rss.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B997F0D41FBB619C00946E71 /* rss.jpeg */; };
+		B9D0C2531FBB750E00559251 /* RSS.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D0C2521FBB750E00559251 /* RSS.m */; };
+		B9D0C2561FBB783700559251 /* RSSFeeds.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D0C2551FBB783700559251 /* RSSFeeds.m */; };
+		B9D0C25A1FBB7AB400559251 /* DatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D0C2591FBB7AB400559251 /* DatabaseManager.m */; };
+		B9D0C25D1FBB7B2900559251 /* RSSAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D0C25C1FBB7B2900559251 /* RSSAPI.m */; };
+		B9D0C2601FBBA6EE00559251 /* ServiceBaseXML.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D0C25F1FBBA6EE00559251 /* ServiceBaseXML.m */; };
+		B9D0C2631FBBAA2800559251 /* ServiceRSS.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D0C2621FBBAA2800559251 /* ServiceRSS.m */; };
+		B9D0C2661FBBC87400559251 /* XmlParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D0C2651FBBC87400559251 /* XmlParser.m */; };
+		B9D0C2691FBBE6C500559251 /* AddRSSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9D0C2681FBBE6C500559251 /* AddRSSViewController.m */; };
+		B9E217FD1FBCA97D007DD3F6 /* RSSDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E217FC1FBCA97D007DD3F6 /* RSSDetailViewController.m */; };
+		B9E218001FBD2372007DD3F6 /* NSDate+InternetDateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E217FF1FBD2372007DD3F6 /* NSDate+InternetDateTime.m */; };
+		B9E218031FBD290B007DD3F6 /* RSSMasterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E218021FBD290B007DD3F6 /* RSSMasterTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E8613BDEA01B20153729298 /* Pods-RSS Reader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSS Reader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSS Reader/Pods-RSS Reader.debug.xcconfig"; sourceTree = "<group>"; };
+		740C6A6DF483CFBC68EB8A23 /* libPods-RSS Reader.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSS Reader.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DC68A81D2DB4DB68110F3D0 /* Pods-RSS Reader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSS Reader.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSS Reader/Pods-RSS Reader.release.xcconfig"; sourceTree = "<group>"; };
+		B9071CDB1FBEFD6F00356A8F /* rss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rss.png; sourceTree = "<group>"; };
+		B9071CDD1FBF1AF300356A8F /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		B9071CDE1FBF39C300356A8F /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		B997F0AA1FBB2CB700946E71 /* RSS Reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RSS Reader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B997F0AD1FBB2CB800946E71 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B997F0AE1FBB2CB800946E71 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -39,7 +57,28 @@
 		B997F0CF1FBB558700946E71 /* RSSMasterTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSSMasterTableViewController.m; sourceTree = "<group>"; };
 		B997F0D11FBB576B00946E71 /* MenuItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuItem.h; sourceTree = "<group>"; };
 		B997F0D21FBB576B00946E71 /* MenuItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuItem.m; sourceTree = "<group>"; };
-		B997F0D41FBB619C00946E71 /* rss.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rss.jpeg; sourceTree = "<group>"; };
+		B9D0C2511FBB750E00559251 /* RSS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSS.h; sourceTree = "<group>"; };
+		B9D0C2521FBB750E00559251 /* RSS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSS.m; sourceTree = "<group>"; };
+		B9D0C2541FBB783700559251 /* RSSFeeds.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSSFeeds.h; sourceTree = "<group>"; };
+		B9D0C2551FBB783700559251 /* RSSFeeds.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSSFeeds.m; sourceTree = "<group>"; };
+		B9D0C2581FBB7AB400559251 /* DatabaseManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DatabaseManager.h; sourceTree = "<group>"; };
+		B9D0C2591FBB7AB400559251 /* DatabaseManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DatabaseManager.m; sourceTree = "<group>"; };
+		B9D0C25B1FBB7B2900559251 /* RSSAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSSAPI.h; sourceTree = "<group>"; };
+		B9D0C25C1FBB7B2900559251 /* RSSAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSSAPI.m; sourceTree = "<group>"; };
+		B9D0C25E1FBBA6EE00559251 /* ServiceBaseXML.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceBaseXML.h; sourceTree = "<group>"; };
+		B9D0C25F1FBBA6EE00559251 /* ServiceBaseXML.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServiceBaseXML.m; sourceTree = "<group>"; };
+		B9D0C2611FBBAA2800559251 /* ServiceRSS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceRSS.h; sourceTree = "<group>"; };
+		B9D0C2621FBBAA2800559251 /* ServiceRSS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServiceRSS.m; sourceTree = "<group>"; };
+		B9D0C2641FBBC87400559251 /* XmlParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XmlParser.h; sourceTree = "<group>"; };
+		B9D0C2651FBBC87400559251 /* XmlParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XmlParser.m; sourceTree = "<group>"; };
+		B9D0C2671FBBE6C500559251 /* AddRSSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddRSSViewController.h; sourceTree = "<group>"; };
+		B9D0C2681FBBE6C500559251 /* AddRSSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddRSSViewController.m; sourceTree = "<group>"; };
+		B9E217FB1FBCA97D007DD3F6 /* RSSDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSSDetailViewController.h; sourceTree = "<group>"; };
+		B9E217FC1FBCA97D007DD3F6 /* RSSDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSSDetailViewController.m; sourceTree = "<group>"; };
+		B9E217FE1FBD2372007DD3F6 /* NSDate+InternetDateTime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+InternetDateTime.h"; sourceTree = "<group>"; };
+		B9E217FF1FBD2372007DD3F6 /* NSDate+InternetDateTime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+InternetDateTime.m"; sourceTree = "<group>"; };
+		B9E218011FBD290B007DD3F6 /* RSSMasterTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSSMasterTableViewCell.h; sourceTree = "<group>"; };
+		B9E218021FBD290B007DD3F6 /* RSSMasterTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSSMasterTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,17 +86,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FB1A5E881EC97D0F76B3BC7 /* libPods-RSS Reader.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8BED8E0BFFFE505C2F3DD8F1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6E8613BDEA01B20153729298 /* Pods-RSS Reader.debug.xcconfig */,
+				9DC68A81D2DB4DB68110F3D0 /* Pods-RSS Reader.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B997F0A11FBB2CB700946E71 = {
 			isa = PBXGroup;
 			children = (
 				B997F0AC1FBB2CB800946E71 /* RSS Reader */,
 				B997F0AB1FBB2CB700946E71 /* Products */,
+				8BED8E0BFFFE505C2F3DD8F1 /* Pods */,
+				E00026FDB509F627BF329F48 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,11 +123,15 @@
 		B997F0AC1FBB2CB800946E71 /* RSS Reader */ = {
 			isa = PBXGroup;
 			children = (
-				B997F0D61FBB61A400946E71 /* Images */,
 				B997F0CA1FBB4BB600946E71 /* View */,
 				B997F0C61FBB486200946E71 /* Controller */,
+				B9D0C2501FBB74EB00559251 /* Model */,
 				B997F0AD1FBB2CB800946E71 /* AppDelegate.h */,
 				B997F0AE1FBB2CB800946E71 /* AppDelegate.m */,
+				B9071CDD1FBF1AF300356A8F /* Constants.h */,
+				B9071CDE1FBF39C300356A8F /* Prefix.pch */,
+				B9D0C2571FBB7A8200559251 /* API */,
+				B997F0D61FBB61A400946E71 /* Images */,
 				B997F0B31FBB2CB800946E71 /* Main.storyboard */,
 				B997F0B61FBB2CB800946E71 /* Assets.xcassets */,
 				B997F0B81FBB2CB800946E71 /* LaunchScreen.storyboard */,
@@ -95,6 +150,10 @@
 				B997F0C81FBB48C000946E71 /* MenuViewController.m */,
 				B997F0CE1FBB558700946E71 /* RSSMasterTableViewController.h */,
 				B997F0CF1FBB558700946E71 /* RSSMasterTableViewController.m */,
+				B9E217FB1FBCA97D007DD3F6 /* RSSDetailViewController.h */,
+				B9E217FC1FBCA97D007DD3F6 /* RSSDetailViewController.m */,
+				B9D0C2671FBBE6C500559251 /* AddRSSViewController.h */,
+				B9D0C2681FBBE6C500559251 /* AddRSSViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -106,6 +165,8 @@
 				B997F0CC1FBB4BCB00946E71 /* MenuTableViewCell.m */,
 				B997F0D11FBB576B00946E71 /* MenuItem.h */,
 				B997F0D21FBB576B00946E71 /* MenuItem.m */,
+				B9E218011FBD290B007DD3F6 /* RSSMasterTableViewCell.h */,
+				B9E218021FBD290B007DD3F6 /* RSSMasterTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -113,9 +174,47 @@
 		B997F0D61FBB61A400946E71 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				B997F0D41FBB619C00946E71 /* rss.jpeg */,
+				B9071CDB1FBEFD6F00356A8F /* rss.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		B9D0C2501FBB74EB00559251 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B9D0C2511FBB750E00559251 /* RSS.h */,
+				B9D0C2521FBB750E00559251 /* RSS.m */,
+				B9D0C2541FBB783700559251 /* RSSFeeds.h */,
+				B9D0C2551FBB783700559251 /* RSSFeeds.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B9D0C2571FBB7A8200559251 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				B9D0C2581FBB7AB400559251 /* DatabaseManager.h */,
+				B9D0C2591FBB7AB400559251 /* DatabaseManager.m */,
+				B9D0C25B1FBB7B2900559251 /* RSSAPI.h */,
+				B9D0C25C1FBB7B2900559251 /* RSSAPI.m */,
+				B9D0C2641FBBC87400559251 /* XmlParser.h */,
+				B9D0C2651FBBC87400559251 /* XmlParser.m */,
+				B9D0C25E1FBBA6EE00559251 /* ServiceBaseXML.h */,
+				B9D0C25F1FBBA6EE00559251 /* ServiceBaseXML.m */,
+				B9D0C2611FBBAA2800559251 /* ServiceRSS.h */,
+				B9D0C2621FBBAA2800559251 /* ServiceRSS.m */,
+				B9E217FE1FBD2372007DD3F6 /* NSDate+InternetDateTime.h */,
+				B9E217FF1FBD2372007DD3F6 /* NSDate+InternetDateTime.m */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		E00026FDB509F627BF329F48 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				740C6A6DF483CFBC68EB8A23 /* libPods-RSS Reader.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +224,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B997F0C01FBB2CB800946E71 /* Build configuration list for PBXNativeTarget "RSS Reader" */;
 			buildPhases = (
+				9F968E49AF02E1EDEA547D58 /* [CP] Check Pods Manifest.lock */,
 				B997F0A61FBB2CB700946E71 /* Sources */,
 				B997F0A71FBB2CB700946E71 /* Frameworks */,
 				B997F0A81FBB2CB700946E71 /* Resources */,
+				43260A4EBE37804D88F4B02F /* [CP] Embed Pods Frameworks */,
+				E0B2A72CB2ECA8A254E51569 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,27 +278,89 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B997F0D51FBB619C00946E71 /* rss.jpeg in Resources */,
 				B997F0BA1FBB2CB800946E71 /* LaunchScreen.storyboard in Resources */,
 				B997F0B71FBB2CB800946E71 /* Assets.xcassets in Resources */,
 				B997F0B51FBB2CB800946E71 /* Main.storyboard in Resources */,
+				B9071CDC1FBEFD6F00356A8F /* rss.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		43260A4EBE37804D88F4B02F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RSS Reader/Pods-RSS Reader-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F968E49AF02E1EDEA547D58 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RSS Reader-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0B2A72CB2ECA8A254E51569 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RSS Reader/Pods-RSS Reader-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B997F0A61FBB2CB700946E71 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9D0C2601FBBA6EE00559251 /* ServiceBaseXML.m in Sources */,
+				B9D0C2531FBB750E00559251 /* RSS.m in Sources */,
+				B9D0C2691FBBE6C500559251 /* AddRSSViewController.m in Sources */,
 				B997F0BD1FBB2CB800946E71 /* main.m in Sources */,
 				B997F0C51FBB485E00946E71 /* PrincipalViewController.m in Sources */,
+				B9D0C2561FBB783700559251 /* RSSFeeds.m in Sources */,
+				B9E218031FBD290B007DD3F6 /* RSSMasterTableViewCell.m in Sources */,
 				B997F0D01FBB558700946E71 /* RSSMasterTableViewController.m in Sources */,
 				B997F0D31FBB576B00946E71 /* MenuItem.m in Sources */,
+				B9D0C2631FBBAA2800559251 /* ServiceRSS.m in Sources */,
 				B997F0CD1FBB4BCB00946E71 /* MenuTableViewCell.m in Sources */,
 				B997F0AF1FBB2CB800946E71 /* AppDelegate.m in Sources */,
+				B9D0C25A1FBB7AB400559251 /* DatabaseManager.m in Sources */,
 				B997F0C91FBB48C000946E71 /* MenuViewController.m in Sources */,
+				B9D0C2661FBBC87400559251 /* XmlParser.m in Sources */,
+				B9E217FD1FBCA97D007DD3F6 /* RSSDetailViewController.m in Sources */,
+				B9E218001FBD2372007DD3F6 /* NSDate+InternetDateTime.m in Sources */,
+				B9D0C25D1FBB7B2900559251 /* RSSAPI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,28 +492,36 @@
 		};
 		B997F0C11FBB2CB800946E71 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E8613BDEA01B20153729298 /* Pods-RSS Reader.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KB4L93EL6S;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Prefix.pch";
 				INFOPLIST_FILE = "RSS Reader/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.rezena.RSS-Reader";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		B997F0C21FBB2CB800946E71 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DC68A81D2DB4DB68110F3D0 /* Pods-RSS Reader.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KB4L93EL6S;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Prefix.pch";
 				INFOPLIST_FILE = "RSS Reader/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.rezena.RSS-Reader";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

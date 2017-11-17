@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Realm.h>
+#import <SDImageCache.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

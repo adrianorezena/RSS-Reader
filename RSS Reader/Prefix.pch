@@ -1,0 +1,14 @@
+//
+//  Prefix.pch
+//  RSS Reader
+//
+//  Created by Adriano Rezena on 17/11/2017.
+//  Copyright © 2017 Adriano Rezena. All rights reserved.
+//
+
+#ifndef Prefix_pch
+#define Prefix_pch
+
+#import "Constants.h"
+
+#endif /* Prefix_pch */

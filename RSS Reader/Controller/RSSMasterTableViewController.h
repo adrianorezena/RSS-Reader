@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RSSFeeds.h"
+#import "RSSAPI.h"
+#import "RSSDetailViewController.h"
+#import "RSSMasterTableViewCell.h"
 
 @interface RSSMasterTableViewController : UITableViewController
+
+@property (strong, nonatomic) RSS *rss;
 
 @end

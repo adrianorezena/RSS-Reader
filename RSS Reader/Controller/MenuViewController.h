@@ -10,6 +10,8 @@
 #import "MenuTableViewCell.h"
 #import "MenuItem.h"
 #import "RSSMasterTableViewController.h"
+#import "AddRSSViewController.h"
+#import "RSSAPI.h"
 
 @protocol MenuViewControllerDelegate;
 

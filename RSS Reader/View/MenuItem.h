@@ -12,5 +12,6 @@
 
 @property (nonatomic, strong) NSString *titulo;
 @property (nonatomic, strong) Class className;
+@property (nonatomic, strong) NSString *url;
 
 @end
